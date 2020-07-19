@@ -1,6 +1,5 @@
 const path = require('path')
 const fs = require('fs')
-const rootDir = path.join(__dirname, 'pages')
 
 module.exports = function rewriteSymlinks(root, cb, opts = {}) {
   return fs.readdirSync(root).map((f) => {
@@ -12,7 +11,7 @@ module.exports = function rewriteSymlinks(root, cb, opts = {}) {
       if (opts.dry) {
         console.log(
           `replacing symlink:\n- symlink location: ${p.replace(
-            rootDir,
+            root,
             ''
           )}\n- old path: ${fs.readlinkSync(
             p
