@@ -1,30 +1,34 @@
 {
   "name": "symlink-rewriter",
-  "version": "0.0.0",
   "description": "small utility for rewriting symlinks",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
+  "version": "0.0.0",
+  "author": "Jeff Escalante",
+  "bugs": {
+    "url": "https://github.com/jescalan/symlink-rewriter/issues"
   },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "release": "^6.1.0"
+  },
+  "homepage": "https://github.com/jescalan/symlink-rewriter#readme",
+  "keywords": [
+    "change",
+    "link",
+    "modify",
+    "rewrite",
+    "symbolic",
+    "symlink"
+  ],
+  "license": "MIT",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jescalan/symlink-rewriter.git"
   },
-  "keywords": [
-    "symlink",
-    "rewrite",
-    "symbolic",
-    "link",
-    "change",
-    "modify"
-  ],
-  "author": "Jeff Escalante",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jescalan/symlink-rewriter/issues"
-  },
-  "homepage": "https://github.com/jescalan/symlink-rewriter#readme",
-  "devDependencies": {
-    "jest": "^26.1.0"
+  "scripts": {
+    "release:major": "release major && npm publish",
+    "release:minor": "release minor && npm publish",
+    "release:patch": "release patch && npm publish",
+    "test": "jest"
   }
 }
